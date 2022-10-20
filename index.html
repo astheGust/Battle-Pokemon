@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokemon Battle</title>
+    <link rel="stylesheet" type="text/css" href="pokemon.css">
+    <script src="poke.js"></script>
+<body>
+    <article id="container">
+        <div id="selectpokemon" class="titulo"><h1 id="titulopararemover">Selecione o Seu Pokemon</h1></div>
+        <section id="box1">
+            <div class="linhapokemon"><button id="pokemon1" onclick="zaz(),botaoativado('combusken')"><img src="imgs/torchicicon.jpg"></button></div>
+            <div class="linhapokemon"><button id="pokemon2" onclick="zaz(),botaoativado('mudkip')"><img src="imgs/mudkipicon.jpg"></button></div>
+            <div class="linhapokemon"><button id="pokemon3" onclick="zaz(),botaoativado('treecko')"><img src="imgs/treeckoicon.jpg"></button></div>
+        </section>
+        <section id="box2">
+            <section id="box2left">
+            <div id="pokemontipo"><h4>POKEMON TIPO</h4></div>
+            <div id="divimgpokemon"><h3 id="nomepokemon">NOMEPOKEMON</h3><img id="imgpokemon"></div>
+            </section>
+            <section id="box2right">
+                <div id="blocoatks">
+                    <div id="divatks">
+                    <h3 class="titulo">Ataques</h3>
+                    <button id="atk1" class="ataques">ataqueum</button>
+                    <button id="atk2" class="ataques">ataquedois</button>
+                    </div>
+                    <div id="atktipo">ATAQUE TIPO:</div>
+                </div>
+                <div id="dano" class="titulo">DANO</div>
+            </section>
+        </section>
+    </article>
+</body>
+</html>
