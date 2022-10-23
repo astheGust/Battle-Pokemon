@@ -23,7 +23,7 @@ function botaoativado(pokemon) {
         document.getElementById("pokemon2").style.border = "2px solid black"
         document.getElementById("pokemon3").style.border = "2px solid black"
 
-        document.getElementById("nomepokemon").innerHTML = "Combusken"
+        document.getElementById("nomepokemon").innerHTML = "Torchic"
         document.getElementById("atk1").innerHTML = "Peck"
         document.getElementById("atk2").innerHTML = "Ember"
 
