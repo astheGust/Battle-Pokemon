@@ -8,27 +8,39 @@
     <script src="poke.js"></script>
 <body>
     <article id="container">
-        <div id="selectpokemon" class="titulo"><h1 id="titulopararemover">Selecione o Seu Pokemon</h1></div>
-        <section id="box1">
-            <div class="linhapokemon"><button id="pokemon1" onclick="zaz(),botaoativado('combusken')"><img src="imgs/torchicicon.jpg"></button></div>
-            <div class="linhapokemon"><button id="pokemon2" onclick="zaz(),botaoativado('mudkip')"><img src="imgs/mudkipicon.jpg"></button></div>
-            <div class="linhapokemon"><button id="pokemon3" onclick="zaz(),botaoativado('treecko')"><img src="imgs/treeckoicon.jpg"></button></div>
+        <div id="selectpokemon" class="centralizar"><h3 id="titulopararemover">Selecione o Seu Pokemon</h3></div>
+        <section id="box1" class="centralizar">
+            <div class="linhapokemon"><button id="pokemon1" onclick="botaoativado('combusken')"><img src="imgs/torchicicon.jpg"></button></div>
+            <div class="linhapokemon"><button id="pokemon2" onclick="botaoativado('mudkip')"><img src="imgs/mudkipicon.jpg"></button></div>
+            <div class="linhapokemon"><button id="pokemon3" onclick="botaoativado('treecko')"><img src="imgs/treeckoicon.jpg"></button></div>
         </section>
         <section id="box2">
             <section id="box2left">
-            <div id="pokemontipo"><h4>POKEMON TIPO</h4></div>
-            <div id="divimgpokemon"><h3 id="nomepokemon">NOMEPOKEMON</h3><img id="imgpokemon"></div>
+                <div style="height:40%;">
+                    <h2 id="nomepokemon"></h2>
+                    <h3 id="pokemontipo">TIPO:</h3>
+                    <img id="pokemontipoimg">
+                </div>
+                <div class="centralizar" id="imgpokemondiv">
+                    <img id="imgpokemon" src="">
+                </div>
             </section>
             <section id="box2right">
                 <div id="blocoatks">
                     <div id="divatks">
-                    <h3 class="titulo">Ataques</h3>
-                    <button id="atk1" class="ataques">ataqueum</button>
-                    <button id="atk2" class="ataques">ataquedois</button>
+                        <h3 id="atks">Ataques</h3>
+                        <button onclick="atksN1()" id="atk1" class="ataques"></button>
+                        <button onclick="atksN2()" id="atk2" class="ataques"></button>
                     </div>
-                    <div id="atktipo">ATAQUE TIPO:</div>
+                    <div id="atktipodiv">
+                        <h3 id="atktipo" class="centralizar">ATAQUE TIPO:</h3>
+                        <div class="centralizar"><img id="atkimg" src="#"></div>
+                    </div>
                 </div>
-                <div id="dano" class="titulo">DANO</div>
+                <div id="dano">
+                    <h3>DANO:</h3>
+                    <div id="danovisor"></div>
+                </div>
             </section>
         </section>
     </article>
