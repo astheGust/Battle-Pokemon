@@ -14,7 +14,7 @@ function botaoativado(pokemon) {
     start.id = "buttonstart"
     try { select.replaceChild(start, h1remove)} 
     catch {this}
-    if (pokemon === "combusken") {
+    if (pokemon === "torchic") {
         document.getElementById("pokemon1").style.filter = "contrast(1.5)"
         document.getElementById("pokemon2").style.filter = "contrast(1)"
         document.getElementById("pokemon3").style.filter = "contrast(1)"
