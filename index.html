@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokemon Battle</title>
-    <link rel="stygit lesheet" type="text/css" href="pokemon.css">
+    <link rel="stylesheet" type="text/css" href="pokemon.css">
     <script src="poke.js"></script>
 <body>
     <article id="container">
-        <div id="selectpokemon" class="centralizar"><h3 id="titulopararemover">Selecione o Seu Pokemon</h3></div>
+        <div id="selectpokemon" class="centralizar"><h4 id="tituloremover">Selecione o Seu Pokemon</h4></div>
         <section id="box1" class="centralizar">
             <div class="linhapokemon"><button id="pokemon1" onclick="botaoativado('torchic')"><img src="imgs/torchicicon.jpg"></button></div>
             <div class="linhapokemon"><button id="pokemon2" onclick="botaoativado('mudkip')"><img src="imgs/mudkipicon.jpg"></button></div>
@@ -17,8 +17,8 @@
         <section id="box2">
             <section id="box2left">
                 <div style="height:40%;">
-                    <h2 id="nomepokemon"></h2>
-                    <h3 id="pokemontipo">TIPO:</h3>
+                    <h4 id="nomepokemon"></h4>
+                    <h3 id="pokemontipo">Tipo:</h3>
                     <img id="pokemontipoimg">
                 </div>
                 <div class="centralizar" id="imgpokemondiv">
@@ -28,17 +28,17 @@
             <section id="box2right">
                 <div id="blocoatks">
                     <div id="divatks">
-                        <h3 id="atks">Ataques</h3>
+                        <h4 id="atks">Ataques</h4>
                         <button onclick="atksN1()" id="atk1" class="ataques"></button>
                         <button onclick="atksN2()" id="atk2" class="ataques"></button>
                     </div>
                     <div id="atktipodiv">
-                        <h3 id="atktipo" class="centralizar">ATAQUE TIPO:</h3>
+                        <h3 id="atktipo" class="centralizar">Ataque Tipo:</h3>
                         <div class="centralizar"><img id="atkimg" src="#"></div>
                     </div>
                 </div>
                 <div id="dano">
-                    <h3>DANO:</h3>
+                    <h4>Dano:</h4>
                     <div id="danovisor"></div>
                 </div>
             </section>

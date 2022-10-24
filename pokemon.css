@@ -1,35 +1,44 @@
 /*FORMATAÇÕES GERAIS*/
 *{margin:0;padding:0;}
-body{width:100vw;height:100vh;font-family:courier,consolas,noto;
+body{width:100vw;height:100vh;font-family:courier,consolas,noto;font-size: 15px;
 background:linear-gradient(to bottom right,#ff1d44,#1c3166,#830024);
 background-repeat: no-repeat;background-size: cover;}
+h3{font-size:1.1em}
+h4{font-size:1.5em}
+button:hover{cursor: pointer;}
 .centralizar{text-align: center;}
 .blackcolor{color:black;text-align:center;}
 .whitecolor{color:white;text-align:center}
 /*BLOCO PRINCIPAL*/
 #container{
-width:28%;height:60vh;/*width de 28% só pq achei interessante*/
+width:30%;min-width:300px;height:60%;min-height:400px;/*width de 28% só pq achei interessante*/
 position: absolute;left:50%;top:50%;transform:translateY(-50%) translate(-50%);}
+
+#buttonstart{font-size:1.5em;
+border:6px outset gray;border-radius:20%;
+padding:2px;margin-bottom:2px}
+#buttonstart:hover{border: 6px outset black;}
 /*****BOX1*****/
-#box1{
-height:50%;width:100%;display:flex;background-image:url("imgs/pokeballbackground.jpg");background-size:cover;
+#box1{height:50%;width:100%;display:flex;
+background-image:url("imgs/pokeballbackground.jpg");background-size:cover;
 border-radius:30px 30px 30px 30px;}
+#box1 button:hover{cursor: initial;}
+
 .linhapokemon{height:115px;width: 100%;margin: auto;}
 .linhapokemon img{width:100%;}
 .linhapokemon button{width:60%;border-radius:100px;}
 /*********BOX2********/
 #box2{display:none;background-size: cover;width:100%;height:50%;filter: contrast(1.2);
 border-radius:0 0 30px 30px;}
-
 #box2left{width: 45%;height:100%;
 float: left;}
 #box2right{display:flex;height:100%;width: 55%;
 float:right;}
 
+#nomepokemon{margin-left:5px;float:left;}
+
 #pokemontipo{margin-left: 5px;}
 #pokemontipoimg{float:right;width:40%;border-radius:50%;margin:3px 3px 0 0;}
-
-#nomepokemon{float:left;font-size:23px;}
 
 #imgpokemondiv{width:100%;height:60%;clear: both;}
 #imgpokemon{height: 90%;image-rendering: pixelated;}
@@ -37,11 +46,16 @@ float:right;}
 /**ATAQUES**/
 #blocoatks{width:65%;height:100%;}
 #divatks{height: 50%;border-left:2px solid black;border-right:2px solid black}
-.ataques{display:block;margin:10px auto;min-width:75px;min-height: 35px;}
+#divatks button:hover{color: gray;}
+.ataques{font-size:1.1em;display:block;border-radius: 5px;
+margin:10px auto;min-width:75px;min-height: 30px;}
 /**ATAQUE TIPO**/
-#atktipodiv{height: 50%;border-left:2px solid black;border-right:2px solid black}
+#atktipodiv{height:50%;border-left:2px solid black;border-right:2px solid black}
 #atkimg{height:50px;width:60px;border-radius:50%;margin:3px 3px 0 0;}
 /**DANO**/
-#dano{width:35%;height:20%;border-bottom: 2px solid black;}
-
-#buttonstart{font-size:23px;border-radius:20%;padding:2px;margin-bottom:2px}
+#dano{width:35%;height:25%;border-bottom: 2px solid black;}
+#danovisor{font-size:1.2em;font-weight: bold;}
+/**Media querie**/
+@media (max-width:1200px){
+    body{font-size: 12px};
+}

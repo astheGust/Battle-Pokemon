@@ -1,15 +1,14 @@
 
 function botaoativado(pokemon) {
-    //vou passar alguns comandos para o css com :active no botão
-    document.getElementById("atktipo").innerHTML = ""
-    document.getElementById('atkimg').style.display = "none"
-    document.getElementById("danovisor").innerHTML = ""
-    document.getElementById("box2").style.display = "block"
-    document.getElementById("box1").style.borderRadius = "30px 30px 0px 0px"
     let start = document.createElement("button")
     let textstart = document.createTextNode("START")
-    let h1remove = (document.getElementById('titulopararemover'))
+    let h1remove = (document.getElementById('tituloremover'))
     let select = document.getElementById('selectpokemon')
+    document.getElementById("atktipo").innerHTML = ""
+    document.getElementById('atkimg').style.display = "none"
+    document.getElementById("dano").style.display = "none"
+    document.getElementById("box2").style.display = "block"
+    document.getElementById("box1").style.borderRadius = "30px 30px 0px 0px"
     start.appendChild(textstart)
     start.id = "buttonstart"
     try { select.replaceChild(start, h1remove)} 
@@ -35,7 +34,7 @@ function botaoativado(pokemon) {
         document.getElementById("pokemontipo").className = "whitecolor"
         document.getElementById("dano").className = "whitecolor"
         document.getElementById("atks").className = "whitecolor"
-        document.getElementById("atktipo").className = "whitecolor"
+        document.getElementById("atktipo").className = "blackcolor"
         }
 
     else if (pokemon === "mudkip") {
@@ -59,7 +58,7 @@ function botaoativado(pokemon) {
         document.getElementById("pokemontipo").className = "blackcolor"
         document.getElementById("dano").className = "blackcolor"
         document.getElementById("atks").className = "blackcolor"
-        document.getElementById("atktipo").className = "blackcolor"
+        document.getElementById("atktipo").className = "whitecolor"
         }
 
     else{
@@ -87,8 +86,9 @@ function botaoativado(pokemon) {
     }
 }
     function atksN1(){
-        document.getElementById("atkimg").style.display = "inline-block"
         let atk1 = document.getElementById("atk1").innerHTML
+        document.getElementById("dano").style.display= "inline-block"
+        document.getElementById("atkimg").style.display = "inline-block"
         if(atk1 === "Peck"){
             document.getElementById("atktipo").innerHTML = "Ataque Tipo: Voador"
             document.getElementById('atkimg').src = "imgs/emblemavoador.jpg"
@@ -106,8 +106,9 @@ function botaoativado(pokemon) {
             }
         }
     function atksN2(){
-        document.getElementById("atkimg").style.display = "inline-block"
         let atk2 = document.getElementById("atk2").innerHTML
+        document.getElementById("dano").style.display= "inline-block"
+        document.getElementById("atkimg").style.display = "inline-block"
         switch(atk2){
             case"Ember":
             document.getElementById("atktipo").innerHTML = "Ataque Tipo: Fogo";
