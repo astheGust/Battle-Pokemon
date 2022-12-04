@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle</title>
+    <link rel="stylesheet" type="text/css" href="pokemon.css">    
+</head>
+<body onload="batalhaDinamica()">
+    <div id="tituloVs"><h2>VS</h2>
+    </div>
+    <article id="arena">
+        <div id="cabinecima">
+            <section id="cabine1">
+                <div class="cabineimgpkm"><img id="pkmimgB1" src="imgs/torchic.gif"></div>
+            </section>
+            <section id="cabine2">
+                <div class="cabineimgpkm"><img id="pkmimgB2" src="imgs/poochyena.gif"></div>
+            </section>
+        </div>
+        <div id="cabinebaixo">
+            <section id="cabine3">
+                <div id="subcabine3_1">
+                    <button onclick="descontarVida()" id="pkatk1" class="btnAtks">1</button>
+                    <button onclick="descontarVida2()" id="pkatk2" class="btnAtks">2</button>
+                </div>
+                <div id="subcabine3_2" class="centralizar">
+                    <h3 id="titulopkmB1">nomepokemon</h3>
+                    <div id="barradvida" aria-valuenow="80" aria-valuemin="0"></div>
+                    <div id="visorvida">80</div>
+                </div>
+            </section>  
+            <div id="logcombate" class="centralizar">
+                <div id="logestatico"></div>
+            </div>     
+            <section id="cabine4">
+                <div id="subcabine4_1" class="centralizar">
+                    <h3 id="titulopkmB2">Poochyena</h3>
+                    <div id="barradvida2" aria-valuenow="80" aria-valuemin="0"></div>
+                <div id="subcabine4_2">
+                     <button id="poochatk1" class="btnAtks" disabled>?</button>
+                     <button id="poochatk2" class="btnAtks" disabled>?</button>                    
+                </div>
+            </section>
+        </div>
+    </article>
+    <script src="poke.js"></script>
+</body>
+</html>

@@ -1,10 +1,11 @@
 /*FORMATAÇÕES GERAIS*/
 *{margin:0;padding:0;}
-body{width:100vw;height:100vh;font-family:courier,consolas,noto;font-size: 15px;
-background:linear-gradient(to bottom right,#ff1d44,#1c3166,#830024);
-background-repeat: no-repeat;background-size: cover;}
+body{width:100vw;height:100vh;font: 15px consolas,small-caps;
+    background:linear-gradient(to bottom right,#ff1d44,#1c3166,#830024);
+    background-repeat: no-repeat;background-size: cover;}
 h3{font-size:1.1em}
 h4{font-size:1.5em}
+a{text-decoration:none;color:black;}
 button:hover{cursor: pointer;}
 .centralizar{text-align: center;}
 .blackcolor{color:black;text-align:center;}
@@ -41,7 +42,7 @@ float:right;}
 #pokemontipoimg{float:right;width:40%;border-radius:50%;margin:3px 3px 0 0;}
 
 #imgpokemondiv{width:100%;height:60%;clear: both;}
-#imgpokemon{height: 90%;image-rendering: pixelated;}
+#imgpokemon{height: 90%;}
 
 /**ATAQUES**/
 #blocoatks{width:65%;height:100%;}
@@ -55,6 +56,46 @@ margin:10px auto;min-width:75px;min-height: 30px;}
 /**DANO**/
 #dano{width:35%;height:25%;border-bottom: 2px solid black;}
 #danovisor{font-size:1.2em;font-weight: bold;}
+
+
+/**Batalha**/
+#tituloVs{text-align:center;padding-top:20px;font:20px consolas;}
+#arena{width:80%;min-width:800px;height:85%;min-height:660px;
+position: absolute;
+left:50%;top:50%;transform:translateY(-50%) translate(-50%);}
+/**Cabines**/
+#cabinecima,#cabinebaixo{display: flex;width:100%;height:50%;}
+
+#cabine1,#cabine2,#cabine3,#cabine4{width:50%;height:100%;}
+
+/**CabineCima**/
+#cabinecima{border-radius:20px 20px 0 0;background:url("https://wallpapercave.com/wp/wp5910265.jpg") no-repeat bottom;background-size:cover;}
+#cabinebaixo{border-radius:0 0 20px 20px;background:url("http://ideawallpapers.com/wp-content/uploads/2020/03/iphone-wallpaper-36.jpg") bottom;background-size:contain;}
+#cabine1,#cabine2{position:relative;}
+
+#cabine1 img,#cabine2 img{height:70%;min-height:200px;
+position:absolute;bottom:0;left:50%;}
+#cabine1{border-right:2px solid #001f36}
+#pkmimgB1{transform: translateX(-50%) rotateY(180deg);}
+#pkmimgB2{transform: translateX(-50%);}
+/**CabineBaixo**/
+
+#cabine3,#cabine4{display: flex;}
+#subcabine3_1,#subcabine4_2{margin:auto;width:40%;height:80%;border-radius:20px;border:4px solid white;background-color:#001f36;}
+#subcabine3_2{margin:10px 5% 0 0;}
+#subcabine4_1{margin:10px 0 0 5%;}
+#subcabine3_2,#subcabine4_1{width:25%;position:relative;border-radius:20px 20px 0 0;border:4px solid white;background-color:#22806b;}
+
+#titulopkmB1,#titulopkmB2{position:absolute;bottom:0;left:50%;transform:translate(-50%)}
+/**LogDCombate**/
+#logcombate{overflow:auto;font-weight:bolder;background-color:blue;width: 30%;height:60%;margin-top:20px;border-radius:20px;border:4px solid white;;background-color:#001f36;}
+#logestatico{margin:5px;padding:5px;border-bottom:1px solid white;}
+#logAtks{margin:0px 5px 0 5px;padding:5px;border-bottom:1px solid white}
+/**Cabine3**/
+.btnAtks{display:block;margin:20% auto;min-width:100px;min-height:40px;font-family:fantasy;font-size:1em}
+/**Vida**/
+#barradvida,#barradvida2{height:80%;width:40%;margin: 20px auto;background:linear-gradient(to bottom,black,gray,black);}
+#visorvida,#visorvida2{position:absolute;bottom:5%;left:50%;transform:translate(-50%)}
 /**Media querie**/
 @media (max-width:1200px){
     body{font-size: 12px};
