@@ -93,7 +93,7 @@ padronizar = () =>{
   };  
 function botaoativado(pokemon) {
     let h1remove = document.getElementById('tituloremover')
-    let select = document.getElementById('selectpokemon')
+    let select = document.getElementById('selectPokemon')
     let start = document.createElement("a")
     let btn = document.createElement("button")
     let link = document.createAttribute("href")
