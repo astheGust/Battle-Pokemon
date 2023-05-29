@@ -206,6 +206,7 @@ function dsVida(){
     return vida2aria = vida2aria - pokemons[2].danoatk1
   }
 };
+
 function dsVida2(){
   if(pkmAtk2.innerHTML == pokemons[0].atk2){
     return vida2aria = vida2aria - pokemons[0].danoatk2
@@ -219,15 +220,15 @@ function dsVida2(){
 };
 
 function descontarVida(){
-  espera()
-  log("meuPokemonAtk1")
-  let opaciInt = setInterval(spriteOpacity,400)
-  setTimeout(()=>{clearInterval(opaciInt)},1500)
-  setTimeout(()=>{
-    barraVida2.style.height = dsVida()+"%"
-    visorVida2.innerHTML = vida2aria},1500)
-  setTimeout(contraAtk,2000)
-};
+    espera()
+    log("meuPokemonAtk1")
+    let opaciInt = setInterval(spriteOpacity,400)
+    setTimeout(()=>{clearInterval(opaciInt)},1500)
+    setTimeout(()=>{
+      barraVida2.style.height = dsVida()+"%"
+      visorVida2.innerHTML = vida2aria},1500)
+      setTimeout(contraAtk,2000)
+}
 function descontarVida2(){
   espera()
   log("meuPokemonAtk2")
@@ -239,6 +240,14 @@ function descontarVida2(){
   setTimeout(contraAtk,2000)
 };
 
+function vitoria(){
+  document.getElementById("tituloVs").style.display = "none"
+  document.getElementById("cabine1").style.border = "0px"
+  document.getElementById("cabine2").style.display = "none"
+  document.getElementById("cabine3").style.display = "none"
+  document.getElementById("cabine4").style.display = "none"
+  document.getElementById("logcombate").innerText = "Parabéns, Você conquistou a vitória nesta Batalha!!!"
+}
 function espera(){
   pkmAtk1.disabled = true
   pkmAtk2.disabled= true
@@ -256,19 +265,25 @@ function spriteOpacity2(){
   pkmImg1.style.filter="opacity(0.6)"
   setTimeout(() => {pkmImg1.style.filter="opacity(1)"}, 200)
 };
+let ataque = ""
 function decisaoAtkInimigo(){
-  d = new Date
-  if(d.getMilliseconds() % 2){
+  
+let randomNumber =  Math.round(Math.random() + 1)
+let halfNumber = randomNumber/2
+  if(Number.isInteger(halfNumber)){
+    ataque = "Tackle"
     return "Tackle"
+  }else{
+    ataque = "Bite"
+    return "Bite"}
+
   }
-  else{
-    return "Bite"
-  }
-};
+
 
 function contraAtk(atk){
-  log("pokemonInimigo")
-  if(decisaoAtkInimigo() == "Tackle"){
+  if(vida2aria <= 0 ){vitoria()}else{
+  if(decisaoAtkInimigo() === "Tackle"){
+    log("pokemonInimigo")
     document.getElementById("poochatk1").innerHTML = pokemonInimigo.atk1
     let opaciInt2 = setInterval(spriteOpacity2,400)
     setTimeout(()=>{clearInterval(opaciInt2)},1500)
@@ -278,6 +293,7 @@ function contraAtk(atk){
       visorVida.innerHTML = vida1aria},1500)
     }
   else{
+    log("pokemonInimigo")
     document.getElementById("poochatk2").innerHTML = pokemonInimigo.atk2
     let opaciInt2 = setInterval(spriteOpacity2,400)
     setTimeout(()=>{clearInterval(opaciInt2)},1500)
@@ -285,7 +301,7 @@ function contraAtk(atk){
     setTimeout(()=>{
       barraVida.style.height = vida1aria + "%"
       visorVida.innerHTML = vida1aria},1500)
-    };
+    };}
 };
 
 function log(atk){
@@ -304,7 +320,7 @@ function log(atk){
     logEstatico.appendChild(paragrafo)
    break
    case "pokemonInimigo":
-    paragrafo.textContent = `${pokemonInimigo.nome} contra ataca com ${decisaoAtkInimigo()}`
+    paragrafo.textContent = `${pokemonInimigo.nome} contra ataca com ${ataque}`
     logEstatico.appendChild(paragrafo)
     break
   }

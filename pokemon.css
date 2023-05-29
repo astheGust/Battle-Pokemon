@@ -60,7 +60,7 @@ margin:10px auto;min-width:75px;min-height: 30px;}
 
 
 /**Batalha**/
-#tituloVs{text-align:center;padding-top:20px;font:20px consolas;}
+#tituloVs{text-align:center;padding-top:20px;font:20px consolas;color:orangered;}
 #arena{width:80%;min-width:800px;height:85%;min-height:660px;
 position: absolute;
 left:50%;top:50%;transform:translateY(-50%) translate(-50%);}
@@ -70,8 +70,8 @@ left:50%;top:50%;transform:translateY(-50%) translate(-50%);}
 #cabine1,#cabine2,#cabine3,#cabine4{width:50%;height:100%;}
 
 /**CabineCima**/
-#cabinecima{border-radius:20px 20px 0 0;background:url("https://wallpapercave.com/wp/wp5910265.jpg") no-repeat bottom;background-size:cover;}
-#cabinebaixo{border-radius:0 0 20px 20px;background:url("http://ideawallpapers.com/wp-content/uploads/2020/03/iphone-wallpaper-36.jpg") bottom;background-size:contain;}
+#cabinecima{justify-content:center;border-radius:20px 20px 0 0;background:url("https://wallpapercave.com/wp/wp5910265.jpg") no-repeat bottom;background-size:cover;}
+#cabinebaixo{justify-content:center;border-radius:0 0 20px 20px;background:url("http://ideawallpapers.com/wp-content/uploads/2020/03/iphone-wallpaper-36.jpg") bottom;background-size:contain;}
 #cabine1,#cabine2{position:relative;}
 
 #cabine1 img,#cabine2 img{height:70%;min-height:200px;
@@ -85,18 +85,18 @@ position:absolute;bottom:0;left:50%;}
 #subcabine3_1,#subcabine4_2{margin:auto;width:40%;height:80%;border-radius:20px;border:4px solid white;background-color:#001f36;}
 #subcabine3_2{margin:10px 5% 0 0;}
 #subcabine4_1{margin:10px 0 0 5%;}
-#subcabine3_2,#subcabine4_1{width:25%;position:relative;border-radius:20px 20px 0 0;border:4px solid white;background-color:#22806b;}
+#subcabine3_2,#subcabine4_1{width:25%;min-width:100px;position:relative;border-radius:20px 20px 0 0;border:4px solid white;background-color:#22806b;}
 
-#titulopkmB1,#titulopkmB2{position:absolute;bottom:0;left:50%;transform:translate(-50%)}
+#titulopkmB1,#titulopkmB2{font-size:1.2rem;position:absolute;bottom:0;left:50%;transform:translate(-50%)}
 /**LogDCombate**/
-#logcombate{overflow:auto;font-weight:bolder;background-color:blue;width: 30%;height:60%;margin-top:20px;border-radius:20px;border:4px solid white;;background-color:#001f36;}
+#logcombate{overflow:auto;font-weight:bolder;color:white;background-color:blue;width: 30%;height:60%;margin-top:20px;border-radius:20px;border:4px solid white;;background-color:#001f36;}
 #logestatico{margin:5px;padding:5px;border-bottom:1px solid white;}
 #logAtks{margin:0px 5px 0 5px;padding:5px;border-bottom:1px solid white}
 /**Cabine3**/
-.btnAtks{display:block;margin:20% auto;min-width:100px;min-height:40px;font-family:fantasy;font-size:1em}
+.btnAtks{display:block;margin:20% auto;min-width:100px;min-height:40px;font-family:monospace;font-size:1rem}
 /**Vida**/
-#barradvida,#barradvida2{height:80%;width:40%;margin: 20px auto;background:linear-gradient(to bottom,black,gray,black);}
-#visorvida,#visorvida2{position:absolute;bottom:5%;left:50%;transform:translate(-50%)}
+#barradvida,#barradvida2{height:80%;width:30%;margin: 20px auto;border-radius:20px;background:linear-gradient(to bottom,green,lightgreen,green);transition: height 1s ease-out;}
+#visorvida,#visorvida2{position:absolute;bottom:5%;left:50%;transform:translate(-50%);font-size:1.3rem;}
 /**Media querie**/
 @media (max-width:1200px){
     body{font-size: 12px};
